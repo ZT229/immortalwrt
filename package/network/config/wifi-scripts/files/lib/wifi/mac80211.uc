@@ -78,7 +78,7 @@ for (let phy_name, phy in board.wlan) {
     let country = 'US';  // 设置默认国家为US
 
     // 分别为 2.4G 和 5G 设置不同的 SSID
-    let ssid = band_name === '2g' ? 'Filogic820_2.4' : 'Filogic820_5';
+    let ssid = band_name === '2g' ? 'Filogic820_2.4G' : 'Filogic820_5G';
     
     print(`set ${s}=wifi-device
 set ${s}.type='mac80211'
@@ -95,7 +95,8 @@ set ${si}.device='${name}'
 set ${si}.network='lan'
 set ${si}.mode='ap'
 set ${si}.ssid='${ssid}'
-set ${si}.encryption='none'  # 不使用加密
+set ${si}.encryption='sae'
+set ${si}.key='qtxyz050618ZTzt.'
 set ${si}.disabled='0'
 
 `);
