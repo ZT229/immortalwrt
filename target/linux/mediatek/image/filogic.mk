@@ -803,8 +803,7 @@ TARGET_DEVICES += h3c_magic-nx30-pro-nmbm
 
 define Device/h3c_magic-nx30-pro-nmbm-112m
   DEVICE_VENDOR := H3C
-  DEVICE_MODEL := Magic NX30 Pro
-  DEVICE_VARIANT := (112M ubi)
+  DEVICE_MODEL := Magic NX30 Pro 112m
   DEVICE_DTS := mt7981b-h3c-magic-nx30-pro-112m
   DEVICE_DTS_DIR := ../dts
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
