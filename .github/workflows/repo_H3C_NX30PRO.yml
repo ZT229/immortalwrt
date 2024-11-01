@@ -1,4 +1,4 @@
-name: Update Branch with Upstream Changes
+name: Update Branch with Upstream Changes FOR H3C_NX30PRO
 
 on:
   schedule:
