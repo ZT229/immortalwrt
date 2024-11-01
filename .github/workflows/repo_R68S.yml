@@ -1,4 +1,4 @@
-name: Update Branch with Upstream Changes FOR R68S
+name: R68S Update Branch with Upstream Changes
 
 on:
   schedule:
