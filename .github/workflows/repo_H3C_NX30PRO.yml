@@ -2,7 +2,7 @@ name: H3C_NX30PRO Update Branch with Upstream Changes
 
 on:
   schedule:
-    - cron: '0 14 * * 2'  # 每周二下午2点触发 (UTC)
+    - cron: "0 2 * * *"  # 每天上午 02:00
   push:
     branches:
       - master  # 当你向 master 分支推送时触发
