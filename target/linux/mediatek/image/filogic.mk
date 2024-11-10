@@ -807,6 +807,7 @@ TARGET_DEVICES += glinet_gl-xe3000
 define Device/h3c_magic-nx30-pro-nmbm
   DEVICE_VENDOR := H3C
   DEVICE_MODEL := Magic NX30 Pro
+  SUPPORTED_DEVICES := h3c,magic-nx30-pro h3c,magic-nx30-pro-nmbm
   DEVICE_DTS := mt7981b-h3c-magic-nx30-pro
   DEVICE_DTS_DIR := ../dts
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
@@ -828,6 +829,7 @@ TARGET_DEVICES += h3c_magic-nx30-pro-nmbm
 define Device/h3c_magic-nx30-pro-nmbm-112m
   DEVICE_VENDOR := H3C
   DEVICE_MODEL := Magic NX30 Pro 112m
+  SUPPORTED_DEVICES := h3c,magic-nx30-pro h3c,magic-nx30-pro-nmbm
   DEVICE_DTS := mt7981b-h3c-magic-nx30-pro-112m
   DEVICE_DTS_DIR := ../dts
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
