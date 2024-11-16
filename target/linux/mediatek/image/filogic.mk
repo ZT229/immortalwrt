@@ -824,7 +824,7 @@ define Device/glinet_gl-xe3000
 endef
 TARGET_DEVICES += glinet_gl-xe3000
 
-define Device/h3c_magic-nx30-pro-nmbm
+define Device/h3c_magic-nx30-pro
   DEVICE_VENDOR := H3C
   DEVICE_MODEL := Magic NX30 Pro
   SUPPORTED_DEVICES := h3c,magic-nx30-pro h3c,magic-nx30-pro-nmbm
@@ -844,9 +844,9 @@ define Device/h3c_magic-nx30-pro-nmbm
   KERNEL_INITRAMFS = kernel-bin | lzma | \
         fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
 endef
-TARGET_DEVICES += h3c_magic-nx30-pro-nmbm
+TARGET_DEVICES += h3c_magic-nx30-pro
 
-define Device/h3c_magic-nx30-pro-nmbm-112m
+define Device/h3c_magic-nx30-pro-112m
   DEVICE_VENDOR := H3C
   DEVICE_MODEL := Magic NX30 Pro 112m
   SUPPORTED_DEVICES := h3c,magic-nx30-pro h3c,magic-nx30-pro-nmbm
@@ -866,7 +866,7 @@ define Device/h3c_magic-nx30-pro-nmbm-112m
   KERNEL_INITRAMFS = kernel-bin | lzma | \
         fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
 endef
-TARGET_DEVICES += h3c_magic-nx30-pro-nmbm-112m
+TARGET_DEVICES += h3c_magic-nx30-pro-112m
 
 define Device/imou_lc-hx3001
   DEVICE_VENDOR := Imou
