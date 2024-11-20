@@ -52,6 +52,7 @@ DEFAULT_PACKAGES.nas:=\
 # @brief Default packages for @DEVICE_TYPE router.
 ##
 DEFAULT_PACKAGES.router:=\
+  autocore \
 	dnsmasq-full \
 	firewall \
 	iptables \
@@ -59,10 +60,16 @@ DEFAULT_PACKAGES.router:=\
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
-	ppp-mod-pppoe
+	ppp-mod-pppoe \
+  coremark \
+  kmod-tun \
+  iptables-mod-tproxy \
+  iptables-mod-extra \
+  ip-full \
+  luci-proto-ipv6 \
+  luci-app-arpbind
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
-	autocore \
 	block-mount \
 	default-settings-chn \
 	kmod-nf-nathelper \
