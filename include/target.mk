@@ -54,18 +54,14 @@ DEFAULT_PACKAGES.nas:=\
 DEFAULT_PACKAGES.router:=\
   autocore \
 	dnsmasq-full \
-	firewall \
-	iptables \
-  iptables-mod-tproxy \
-  iptables-mod-extra \
-  ip-full \
-	kmod-ipt-offload \
+	firewall4 \
+	nftables \
+	kmod-nft-offload \
   kmod-tun \
   kmod-tcp-bbr \
   kmod-sched-cake \
   kmod-nf-nathelper \
 	kmod-nf-nathelper-extra \
-  kmod-ipt-raw \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
