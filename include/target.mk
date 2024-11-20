@@ -34,7 +34,8 @@ DEFAULT_PACKAGES:=\
 	urandom-seed \
 	urngd \
   zram-swap \
-  uencrypt-openssl
+  uencrypt-openssl \
+  htop
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
@@ -59,6 +60,7 @@ DEFAULT_PACKAGES.router:=\
 	kmod-nft-offload \
   kmod-tun \
   kmod-tcp-bbr \
+  kmod-tls \
   kmod-sched-cake \
   kmod-nf-nathelper \
 	kmod-nf-nathelper-extra \
@@ -68,6 +70,9 @@ DEFAULT_PACKAGES.router:=\
   kmod-nft-dup-inet \
   kmod-nft-bridge \
   kmod-nft-arp \
+  kmod-nls-utf8 \
+  kmod-nls-cp936 \
+  kmod-nls-cp437 \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
