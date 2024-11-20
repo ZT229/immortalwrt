@@ -62,7 +62,7 @@ define Package/fstools/config
 	config FSTOOLS_OVL_MOUNT_COMPRESS_ZLIB
 		depends on PACKAGE_fstools
 		bool "Compress using zlib"
-		default n
+		default y
 		help
 			This option enables the compression using zlib on the storage device.
 endef
