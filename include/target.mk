@@ -62,6 +62,12 @@ DEFAULT_PACKAGES.router:=\
   kmod-sched-cake \
   kmod-nf-nathelper \
 	kmod-nf-nathelper-extra \
+  kmod-nft-queue \
+  kmod-nft-socket \
+  kmod-nft-tproxy \
+  kmod-nft-dup-inet \
+  kmod-nft-bridge \
+  kmod-nft-arp \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
