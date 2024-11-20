@@ -282,6 +282,7 @@ config OPENSSL_ENGINE_BUILTIN_AFALG
 
 config OPENSSL_ENGINE_BUILTIN_DEVCRYPTO
 	bool
+	default y
 	prompt "Acceleration support through /dev/crypto"
 	depends on OPENSSL_ENGINE_BUILTIN
 	select PACKAGE_libopenssl-conf
