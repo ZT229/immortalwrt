@@ -70,9 +70,22 @@ DEFAULT_PACKAGES.router:=\
   kmod-nft-dup-inet \
   kmod-nft-bridge \
   kmod-nft-arp \
+  kmod-nft-netdev \
   kmod-nls-utf8 \
   kmod-nls-cp936 \
   kmod-nls-cp437 \
+  kmod-crypto-blake2b \
+  kmod-crypto-cbc \
+  kmod-crypto-chacha20poly1305 \
+  kmod-crypto-cts \
+  kmod-crypto-deflate \
+  kmod-crypto-ecdh \
+  kmod-crypto-echainiv \
+  kmod-crypto-essiv \
+  kmod-crypto-kpp \
+  kmod-crypto-pcbc \
+  kmod-crypto-xcbc \
+  kmod-crypto-xxhash \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
