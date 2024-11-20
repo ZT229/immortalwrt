@@ -32,7 +32,8 @@ DEFAULT_PACKAGES:=\
 	uci \
 	uclient-fetch \
 	urandom-seed \
-	urngd
+	urngd \
+        zram-swap
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
