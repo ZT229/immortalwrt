@@ -830,7 +830,7 @@ define Device/h3c_magic-nx30-pro
   SUPPORTED_DEVICES := h3c,magic-nx30-pro h3c,magic-nx30-pro-nmbm
   DEVICE_DTS := mt7981b-h3c-magic-nx30-pro
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-mtd-rw
   UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
   PAGESIZE := 2048
@@ -852,7 +852,7 @@ define Device/h3c_magic-nx30-pro-112m
   SUPPORTED_DEVICES := h3c,magic-nx30-pro h3c,magic-nx30-pro-nmbm
   DEVICE_DTS := mt7981b-h3c-magic-nx30-pro-112m
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-mtd-rw
   UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
   PAGESIZE := 2048
