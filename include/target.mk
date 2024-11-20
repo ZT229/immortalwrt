@@ -35,7 +35,9 @@ DEFAULT_PACKAGES:=\
 	urngd \
   zram-swap \
   uencrypt-openssl \
-  htop
+  htop \
+  curl \
+  wget-ssl
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
