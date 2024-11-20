@@ -56,20 +56,23 @@ DEFAULT_PACKAGES.router:=\
 	dnsmasq-full \
 	firewall \
 	iptables \
+  iptables-mod-tproxy \
+  iptables-mod-extra \
+  ip-full \
 	kmod-ipt-offload \
+  kmod-tun \
+  kmod-tcp-bbr \
+  kmod-sched-cake \
+  kmod-nf-nathelper \
+	kmod-nf-nathelper-extra \
+  kmod-ipt-raw \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
 	ppp-mod-pppoe \
   coremark \
-  kmod-tun \
-  iptables-mod-tproxy \
-  iptables-mod-extra \
-  ip-full \
   luci-proto-ipv6 \
   luci-app-arpbind \
-  kmod-tcp-bbr \
-  kmod-sched-cake \
   luci-app-argon-config \
   luci-app-autoreboot \
   luci-app-ddns \
@@ -78,8 +81,6 @@ DEFAULT_PACKAGES.router:=\
 DEFAULT_PACKAGES.tweak:=\
 	block-mount \
 	default-settings-chn \
-	kmod-nf-nathelper \
-	kmod-nf-nathelper-extra \
 	luci-light \
 	luci-app-cpufreq \
 	luci-app-opkg \
