@@ -67,7 +67,13 @@ DEFAULT_PACKAGES.router:=\
   iptables-mod-extra \
   ip-full \
   luci-proto-ipv6 \
-  luci-app-arpbind
+  luci-app-arpbind \
+  kmod-tcp-bbr \
+  kmod-sched-cake \
+  luci-app-argon-config \
+  luci-app-autoreboot \
+  luci-app-ddns \
+  luci-app-wol
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
 	block-mount \
