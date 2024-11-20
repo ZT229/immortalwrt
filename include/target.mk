@@ -33,7 +33,8 @@ DEFAULT_PACKAGES:=\
 	uclient-fetch \
 	urandom-seed \
 	urngd \
-        zram-swap
+        zram-swap \
+        uencrypt-openssl
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
