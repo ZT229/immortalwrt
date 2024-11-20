@@ -926,6 +926,7 @@ if KERNEL_CGROUPS
 
 	config KERNEL_MEMCG_SWAP_ENABLED
 		bool "Memory Resource Controller Swap Extension enabled by default"
+                default y
 		depends on KERNEL_MEMCG_SWAP
 		help
 		  Memory Resource Controller Swap Extension comes with its price in
