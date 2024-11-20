@@ -95,6 +95,7 @@ config DROPBEAR_ED25519_SK
 
 config DROPBEAR_ZLIB
 	bool "Enable compression"
+        default y
 	help
 		Enables compression using shared zlib library.
 
@@ -175,6 +176,7 @@ config DROPBEAR_AGENTFORWARD
 
 config DROPBEAR_MODERN_ONLY
 	bool "Use modern crypto only [BREAKS COMPATIBILITY]"
+        default y
 	select DROPBEAR_ED25519
 	select DROPBEAR_CURVE25519
 	select DROPBEAR_CHACHA20POLY1305
