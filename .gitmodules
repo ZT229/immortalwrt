@@ -1,0 +1,3 @@
+[submodule "package/dae"]
+	path = package/dae
+	url = https://github.com/QiuSimons/luci-app-daed.git
