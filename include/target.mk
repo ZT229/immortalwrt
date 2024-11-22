@@ -104,12 +104,17 @@ DEFAULT_PACKAGES.router:=\
   coremark \
   cpusage \
   lscpu \
+  UDPspeeder \
   luci-proto-ipv6 \
   luci-app-arpbind \
   luci-app-argon-config \
   luci-app-autoreboot \
   luci-app-ddns \
-  luci-app-wol
+  luci-app-wol \
+  luci-app-upnp \
+  luci-app-zerotier \
+  luci-app-passwall \
+  luci-app-ttyd
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
 	block-mount \
