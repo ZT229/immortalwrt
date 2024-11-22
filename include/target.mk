@@ -37,7 +37,13 @@ DEFAULT_PACKAGES:=\
   uencrypt-openssl \
   htop \
   curl \
-  wget-ssl
+  wget-ssl \
+  dnsdist-full \
+  dnslookup \
+  dnsproxy \
+  dnscrypt-proxy \
+  dns-forwarder \
+  dns-over-https
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
@@ -59,6 +65,8 @@ DEFAULT_PACKAGES.router:=\
 	dnsmasq-full \
 	firewall4 \
 	nftables \
+  ip6tables-extra \
+  ip6tables-mod-nat \
 	kmod-nft-offload \
   kmod-tun \
   kmod-tcp-bbr \
@@ -87,12 +95,15 @@ DEFAULT_PACKAGES.router:=\
   kmod-crypto-kpp \
   kmod-crypto-pcbc \
   kmod-crypto-xcbc \
+  kmod-crypto-misc \
   kmod-crypto-xxhash \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
 	ppp-mod-pppoe \
   coremark \
+  cpusage \
+  lscpu \
   luci-proto-ipv6 \
   luci-app-arpbind \
   luci-app-argon-config \
