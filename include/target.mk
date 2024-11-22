@@ -113,7 +113,6 @@ DEFAULT_PACKAGES.router:=\
   luci-app-wol \
   luci-app-upnp \
   luci-app-zerotier \
-  luci-app-passwall \
   luci-app-ttyd
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
