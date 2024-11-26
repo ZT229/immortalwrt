@@ -314,7 +314,7 @@ menu "Target Images"
 	config TARGET_ROOTFS_PARTSIZE
 		int "Root filesystem partition size (in MiB)"
 		depends on USES_ROOTFS_PART || TARGET_ROOTFS_EXT4FS
-		default 448 if TARGET_mediatek
+		default 1024 if TARGET_mediatek
 		default 300 if BUILDBOT
 		default 160
 		help
