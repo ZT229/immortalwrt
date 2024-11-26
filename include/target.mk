@@ -98,6 +98,8 @@ DEFAULT_PACKAGES.router:=\
   kmod-crypto-xcbc \
   kmod-crypto-misc \
   kmod-crypto-xxhash \
+  kmod-crypto-engine \
+  kmod-crypto-fcrypt \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
