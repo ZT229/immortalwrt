@@ -40,10 +40,6 @@ To build your own firmware you need a GNU/Linux, BSD or macOS system (case sensi
           upx-ucl unzip vim wget xmlto xxd zlib1g-dev zstd
         ```
       </details>
-    - Method 2:
-      ```bash
-      sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh)'
-      ```
 
   Note:
   - Do everything as an unprivileged user, not root, without sudo.
