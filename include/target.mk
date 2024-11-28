@@ -44,7 +44,10 @@ DEFAULT_PACKAGES:=\
   dnsproxy \
   dnscrypt-proxy \
   dns-forwarder \
-  dns-over-https
+  dns-over-https \
+  block-mount \
+  blockd \
+  v2dat
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
@@ -116,7 +119,9 @@ DEFAULT_PACKAGES.router:=\
   luci-app-wol \
   luci-app-upnp \
   luci-app-zerotier \
-  luci-app-ttyd
+  luci-app-ttyd \
+  luci-app-passwall \
+  luci-app-smartdns
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
 	block-mount \
