@@ -119,7 +119,6 @@ DEFAULT_PACKAGES.router:=\
   luci-app-wol \
   luci-app-upnp \
   luci-app-zerotier \
-  luci-app-ttyd \
   luci-app-passwall \
   luci-app-smartdns
 # For easy usage
