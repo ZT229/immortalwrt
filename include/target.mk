@@ -120,11 +120,10 @@ DEFAULT_PACKAGES.router:=\
   luci-app-upnp \
   luci-app-zerotier \
   luci-app-passwall \
-  luci-app-smartdns
+  luci-app-smartdns \
+  default-settings-chn
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
-	block-mount \
-	default-settings-chn \
 	luci-light \
 	luci-app-cpufreq \
 	luci-app-package-manager \
