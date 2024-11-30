@@ -960,7 +960,7 @@ if KERNEL_CGROUPS
 
 
 	config KERNEL_MEMCG_KMEM
-		bool "Memory Resource Controller Kernel Memory accounting (EXPERIMENTAL)"
+		bool "Memory Resource Controller Kernel Memory accounting"
 		default y
 		depends on KERNEL_MEMCG
 		help
