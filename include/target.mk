@@ -121,6 +121,9 @@ DEFAULT_PACKAGES.router:=\
   luci-app-zerotier \
   luci-app-passwall \
   luci-app-smartdns \
+  luci-app-filetransfer \
+  luci-app-cpu-status \
+  luci-app-homeproxy \
   default-settings-chn
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
