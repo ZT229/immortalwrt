@@ -124,6 +124,7 @@ DEFAULT_PACKAGES.router:=\
   luci-app-filetransfer \
   luci-app-cpu-status \
   luci-app-homeproxy \
+  luci-app-statistics \
   default-settings-chn
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
