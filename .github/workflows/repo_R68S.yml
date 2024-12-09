@@ -1,6 +1,6 @@
 name: R68S Update Branch with Upstream Changes
 
-on:
+#on:
   schedule:
     - cron: "0 2 * * *"  # 每天上午 02:00
   push:
@@ -8,7 +8,7 @@ on:
       - master  # 当你向 master 分支推送时触发
   workflow_dispatch:  # 允许手动触发工作流
 
-jobs:
+#jobs:
   update:
     runs-on: ubuntu-latest
 
