@@ -76,6 +76,7 @@ DEFAULT_PACKAGES.router:=\
   kmod-tun \
   kmod-tcp-bbr \
   kmod-tls \
+  kmod-nf-ipvs \
   kmod-sched-cake \
   kmod-nf-nathelper \
 	kmod-nf-nathelper-extra \
