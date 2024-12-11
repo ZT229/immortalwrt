@@ -95,7 +95,7 @@ define Build/U-Boot/Target
     ifneq ($(BUILD_TARGET),)
       DEPENDS += @$(TARGET_DEP)
       ifneq ($(BUILD_DEVICES),)
-        DEFAULT := y if ($(TARGET_DEP)_Default \
+        DEFAULT := n if ($(TARGET_DEP)_Default \
 		$(patsubst %,|| $(TARGET_DEP)_DEVICE_%,$(BUILD_DEVICES)) \
 		$(patsubst %,|| $(patsubst TARGET_%,TARGET_DEVICE_%,$(TARGET_DEP))_DEVICE_%,$(BUILD_DEVICES)))
       endif
