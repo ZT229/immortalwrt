@@ -6,7 +6,7 @@ menu "Target Images"
 
 	menuconfig TARGET_ROOTFS_INITRAMFS
 		bool "ramdisk"
-		default y if USES_INITRAMFS
+		default n if USES_INITRAMFS
 		help
 		  Embed the root filesystem into the kernel (initramfs).
 
