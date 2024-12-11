@@ -174,7 +174,6 @@ menu "Global build settings"
 
 	config USE_LTO
 		bool
-  		default y
 		prompt "Use the link-time optimizer for all packages (EXPERIMENTAL)"
 		help
 		  Adds LTO flags to the CFLAGS and LDFLAGS.
