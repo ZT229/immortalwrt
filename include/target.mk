@@ -112,6 +112,8 @@ DEFAULT_PACKAGES.router:=\
   cpusage \
   lscpu \
   UDPspeeder \
+  libdcwproto \
+  libdcwsocket \
   luci-proto-ipv6 \
   luci-app-arpbind \
   luci-app-argon-config \
@@ -125,7 +127,6 @@ DEFAULT_PACKAGES.router:=\
   luci-app-filetransfer \
   luci-app-cpu-status \
   luci-app-homeproxy \
-  luci-app-statistics \
   luci-app-daed \
   default-settings-chn
 # For easy usage
