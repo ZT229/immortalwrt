@@ -47,7 +47,8 @@ DEFAULT_PACKAGES:=\
   dns-over-https \
   block-mount \
   blockd \
-  v2dat
+  v2dat \
+  brook
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
@@ -125,6 +126,7 @@ DEFAULT_PACKAGES.router:=\
   luci-app-cpu-status \
   luci-app-homeproxy \
   luci-app-statistics \
+  luci-app-daed \
   default-settings-chn
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
