@@ -3,6 +3,7 @@
 # Copyright (C) 2013-2021 OpenWrt.org
 
 include $(TOPDIR)/rules.mk
+TARGET_CFLAGS += -O3 -pipe -funroll-loops -mcpu=cortex-a53
 
 PKG_NAME:=zram-swap
 PKG_RELEASE:=32
