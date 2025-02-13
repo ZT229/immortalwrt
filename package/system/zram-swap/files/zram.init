@@ -1,6 +1,6 @@
 #!/bin/sh /etc/rc.common
 
-START=15
+START=10
 
 extra_command "compact" "Trigger compaction for all zram swap devices"
 extra_command "status" "Print out information & statistics about zram swap devices"
@@ -60,8 +60,8 @@ zram_comp_algo()
 	local zram_comp_algo="$( uci -q get system.@system[0].zram_comp_algo )"
 
 	if [ -z "$zram_comp_algo" ]; then
-		# default to lzo, which is always available
-		zram_comp_algo="lzo"
+		# default to zstd, which is always available
+		zram_comp_algo="zstd"
 	fi
 
 	if [ $(grep -c "$zram_comp_algo" /sys/block/$( basename $dev )/comp_algorithm) -ne 0 ]; then

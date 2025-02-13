@@ -83,6 +83,7 @@ config OPENSSL_WITH_TLS13
 
 config OPENSSL_WITH_DTLS
 	bool
+	default y
 	prompt "Enable DTLS support"
 	help
 		Datagram Transport Layer Security (DTLS) provides TLS-like security
@@ -90,6 +91,7 @@ config OPENSSL_WITH_DTLS
 
 config OPENSSL_WITH_NPN
 	bool
+	default y
 	prompt "Enable NPN support"
 	help
 		NPN is a TLS extension, obsoleted and replaced with ALPN,
@@ -116,6 +118,7 @@ comment "Algorithm Selection"
 
 config OPENSSL_WITH_EC2M
 	bool
+	default y
 	prompt "Enable ec2m support"
 	help
 		This option enables the more efficient, yet less common, binary
@@ -154,6 +157,7 @@ comment "Less commonly used build options"
 
 config OPENSSL_WITH_ARIA
 	bool
+	default y
 	prompt "Enable ARIA support"
 	help
 		ARIA is a block cipher developed in South Korea, based on AES.
@@ -188,6 +192,7 @@ config OPENSSL_WITH_SEED
 
 config OPENSSL_WITH_SM234
 	bool
+	default y
 	prompt "Enable SM2/3/4 algorithms support"
 	help
 		These algorithms are a set of "Commercial Cryptography"
@@ -198,6 +203,7 @@ config OPENSSL_WITH_SM234
 
 config OPENSSL_WITH_BLAKE2
 	bool
+	default y
 	prompt "Enable BLAKE2 digest support"
 	help
 		BLAKE2 is a cryptographic hash function based on the ChaCha
@@ -223,6 +229,7 @@ config OPENSSL_WITH_WHIRLPOOL
 
 config OPENSSL_WITH_COMPRESSION
 	bool
+	default y
 	prompt "Enable compression support"
 	help
 		TLS compression is not recommended, as it is deemed insecure.
@@ -232,6 +239,7 @@ config OPENSSL_WITH_COMPRESSION
 
 config OPENSSL_WITH_RFC3779
 	bool
+	default y
 	prompt "Enable RFC3779 support (BGP)"
 	help
 		RFC 3779 defines two X.509 v3 certificate extensions.  The first
@@ -261,6 +269,7 @@ config OPENSSL_ENGINE
 
 config OPENSSL_ENGINE_BUILTIN
 	bool "Build chosen engines into libcrypto"
+	default y
 	depends on OPENSSL_ENGINE
 	help
 		This builds all chosen engines into libcrypto.so, instead of building
@@ -270,6 +279,7 @@ config OPENSSL_ENGINE_BUILTIN
 
 config OPENSSL_ENGINE_BUILTIN_AFALG
 	bool
+	default y
 	prompt "Acceleration support through AF_ALG sockets engine"
 	depends on OPENSSL_ENGINE_BUILTIN && KERNEL_AIO
 	select PACKAGE_libopenssl-conf
@@ -279,6 +289,7 @@ config OPENSSL_ENGINE_BUILTIN_AFALG
 
 config OPENSSL_ENGINE_BUILTIN_DEVCRYPTO
 	bool
+	default y
 	prompt "Acceleration support through /dev/crypto"
 	depends on OPENSSL_ENGINE_BUILTIN
 	select PACKAGE_libopenssl-conf

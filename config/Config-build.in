@@ -122,6 +122,7 @@ menu "Global build settings"
 
 	config INCLUDE_CONFIG
 		bool "Include build configuration in firmware" if DEVEL
+		default n
 		help
 		  If enabled, buildinfo files will be stored in /etc/build.* of firmware.
 

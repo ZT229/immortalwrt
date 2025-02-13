@@ -55,13 +55,13 @@ for (let phy_name, phy in board.wlan) {
 
 		let width = band.max_width;
 		if (band_name == "2G")
-			width = 20;
-		else if (width > 80)
-			width = 80;
+			width = 40;
+		else if (band_name == "5G")
+			width = 160;
 
 		let htmode = filter(htmode_order, (m) => band[lc(m)])[0];
 		if (htmode)
-			htmode += width;
+			htmode = "HE" + width;
 		else
 			htmode = "NOHT";
 
@@ -78,14 +78,9 @@ for (let phy_name, phy in board.wlan) {
 
 		band_name = lc(band_name);
 
-		let country, defaults, num_global_macaddr;
-		if (board.wlan.defaults) {
-			defaults = board.wlan.defaults.ssids?.[band_name]?.ssid ? board.wlan.defaults.ssids?.[band_name] : board.wlan.defaults.ssids?.all;
-			country = board.wlan.defaults.country;
-			if (!country && band_name != '2g')
-				defaults = null;
-			num_global_macaddr = board.wlan.defaults.ssids?.[band_name]?.mac_count;
-		}
+		let country_code = 'AU';
+		let ssid = band_name === '2g' ? 'Filogic_2.4G' : 'Filogic_5G';
+		let password = 'qtxyz050618ZTzt.';
 
 		if (length(info.radios) > 0)
 			id += `\nset ${s}.radio='${radio.index}'`;
@@ -96,17 +91,26 @@ set ${s}.${id}
 set ${s}.band='${band_name}'
 set ${s}.channel='${channel}'
 set ${s}.htmode='${htmode}'
-set ${s}.country='${country || ''}'
-set ${s}.num_global_macaddr='${num_global_macaddr || ''}'
+set ${s}.country='${country_code}'
+set ${s}.mu_beamformer='1'
+set ${s}.cell_density='1'
 set ${s}.disabled='0'
 
 set ${si}=wifi-iface
 set ${si}.device='${name}'
 set ${si}.network='lan'
 set ${si}.mode='ap'
-set ${si}.ssid='${defaults?.ssid || "ImmortalWrt"}'
-set ${si}.encryption='${defaults?.encryption || "none"}'
-set ${si}.key='${defaults?.key || ""}'
+set ${si}.ssid='${ssid}'
+set ${si}.encryption='sae'
+set ${si}.key='${password}'
+set ${si}.ieee80211k='1'
+set ${si}.time_advertisement='2'
+set ${si}.time_zone='CST-8'
+set ${si}.wnm_sleep_mode='1'
+set ${si}.wnm_sleep_mode_no_keys='1'
+set ${si}.bss_transition='1'
+set ${si}.ocv='0'
+set ${si}.disabled='0'
 
 `);
 		config[name] = {};

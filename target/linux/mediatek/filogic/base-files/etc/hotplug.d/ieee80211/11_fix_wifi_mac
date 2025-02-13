@@ -95,9 +95,13 @@ case "$board" in
 		[ "$PHYNBR" = "0" ] && echo "$addr" > /sys${DEVPATH}/macaddress
 		[ "$PHYNBR" = "1" ] && macaddr_add $addr 1 > /sys${DEVPATH}/macaddress
 		;;
-	h3c,magic-nx30-pro|\
-	h3c,magic-nx30-pro-nmbm)
-		addr=$(mtd_get_mac_ascii pdt_data_1 ethaddr)
+	h3c,magic-nx30-pro)
+		addr="18:F0:E4:20:3C:E2"
+		[ "$PHYNBR" = "0" ] && macaddr_add $addr 2 > /sys${DEVPATH}/macaddress
+		[ "$PHYNBR" = "1" ] && macaddr_add $addr 3 > /sys${DEVPATH}/macaddress
+		;;
+	h3c,magic-nx30-pro-112m)
+		addr="50:eb:f6:d7:a2:11"
 		[ "$PHYNBR" = "0" ] && macaddr_add $addr 2 > /sys${DEVPATH}/macaddress
 		[ "$PHYNBR" = "1" ] && macaddr_add $addr 3 > /sys${DEVPATH}/macaddress
 		;;

@@ -21,6 +21,7 @@ DEVICE_TYPE?=router
 DEFAULT_PACKAGES:=\
 	base-files \
 	ca-bundle \
+  ca-certificates \
 	dropbear \
 	fstools \
 	libc \
@@ -32,7 +33,11 @@ DEFAULT_PACKAGES:=\
 	uci \
 	uclient-fetch \
 	urandom-seed \
-	urngd
+	urngd \
+  zram-swap \
+  btop \
+  curl \
+  wget-ssl
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
@@ -54,19 +59,49 @@ DEFAULT_PACKAGES.router:=\
 	firewall4 \
 	nftables \
 	kmod-nft-offload \
+  kmod-nf-nathelper \
+	kmod-nf-nathelper-extra \
+  kmod-nf-nat6 \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
-	ppp-mod-pppoe
+	ppp-mod-pppoe \
+  autocore \
+  kmod-tun \
+  kmod-tcp-bbr \
+  kmod-tls \
+  kmod-sched-cake \
+  kmod-nft-queue \
+  kmod-nft-socket \
+  kmod-nft-tproxy \
+  kmod-crypto-blake2b \
+  kmod-crypto-cbc \
+  kmod-crypto-chacha20poly1305 \
+  kmod-crypto-cts \
+  kmod-crypto-deflate \
+  kmod-crypto-ecdh \
+  kmod-crypto-echainiv \
+  kmod-crypto-essiv \
+  kmod-crypto-kpp \
+  kmod-crypto-pcbc \
+  kmod-crypto-xcbc \
+  kmod-crypto-misc \
+  kmod-crypto-xxhash \
+  kmod-crypto-engine \
+  kmod-crypto-fcrypt \
+  kmod-crypto-md4 \
+  UDPspeeder \
+  openssh-sftp-server \
+  luci-proto-ipv6 \
+  luci-app-wol \
+  luci-app-filetransfer \
+  luci-app-openclash \
+  default-settings-chn
+
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
-	autocore \
 	block-mount \
-	default-settings-chn \
-	kmod-nf-nathelper \
-	kmod-nf-nathelper-extra \
 	luci-light \
-	luci-app-cpufreq \
 	luci-app-package-manager \
 	luci-compat \
 	luci-lib-base \
@@ -237,7 +272,7 @@ LINUX_RECONF_DIFF = $(SCRIPT_DIR)/kconfig.pl - '>' $(call __linux_confcmd,$(filt
 ifeq ($(DUMP),1)
   BuildTarget=$(BuildTargets/DumpCurrent)
 
-  CPU_CFLAGS = -Os -pipe
+  CPU_CFLAGS = -Os -pipe -funroll-loops
   ifneq ($(findstring mips,$(ARCH)),)
     ifneq ($(findstring mips64,$(ARCH)),)
       CPU_TYPE ?= mips64
@@ -281,7 +316,7 @@ ifeq ($(DUMP),1)
   ifeq ($(ARCH),aarch64)
     CPU_TYPE ?= generic
     CPU_CFLAGS_generic = -mcpu=generic
-    CPU_CFLAGS_cortex-a53 = -mcpu=cortex-a53
+    CPU_CFLAGS_cortex-a53 = -march=armv8-a+crypto+crc -mcpu=cortex-a53+crypto+crc -mtune=cortex-a53
   endif
   ifeq ($(ARCH),arc)
     CPU_TYPE ?= arc700

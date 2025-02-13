@@ -26,7 +26,7 @@ config KERNEL_PRINTK
 
 config KERNEL_SWAP
 	bool "Support for paging of anonymous memory (swap)"
-	default y if !SMALL_FLASH
+	default y
 
 config KERNEL_PROC_STRIPPED
 	bool "Strip non-essential /proc functionality to reduce code size"
@@ -945,6 +945,7 @@ if KERNEL_CGROUPS
 
 	config KERNEL_MEMCG_SWAP_ENABLED
 		bool "Memory Resource Controller Swap Extension enabled by default"
+        default y
 		depends on KERNEL_MEMCG_SWAP
 		help
 		  Memory Resource Controller Swap Extension comes with its price in
@@ -959,7 +960,7 @@ if KERNEL_CGROUPS
 
 
 	config KERNEL_MEMCG_KMEM
-		bool "Memory Resource Controller Kernel Memory accounting (EXPERIMENTAL)"
+		bool "Memory Resource Controller Kernel Memory accounting"
 		default y
 		depends on KERNEL_MEMCG
 		help
