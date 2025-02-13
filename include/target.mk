@@ -59,7 +59,6 @@ DEFAULT_PACKAGES.router:=\
 	firewall4 \
 	nftables \
 	kmod-nft-offload \
-  kmod-nf-nat6 \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
