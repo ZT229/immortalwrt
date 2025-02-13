@@ -21,7 +21,6 @@ DEVICE_TYPE?=router
 DEFAULT_PACKAGES:=\
 	base-files \
 	ca-bundle \
-  ca-certificates \
 	dropbear \
 	fstools \
 	libc \
@@ -34,10 +33,10 @@ DEFAULT_PACKAGES:=\
 	uclient-fetch \
 	urandom-seed \
 	urngd \
-  zram-swap \
-  btop \
-  curl \
-  wget-ssl
+  	zram-swap \
+  	btop \
+  	curl \
+  	wget-ssl
 
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
@@ -63,41 +62,43 @@ DEFAULT_PACKAGES.router:=\
 	odhcpd-ipv6only \
 	ppp \
 	ppp-mod-pppoe \
-  autocore \
-  kmod-tun \
-  kmod-tcp-bbr \
-  kmod-tls \
-  kmod-sched-cake \
-  kmod-nft-queue \
-  kmod-nft-socket \
-  kmod-nft-tproxy \
-  kmod-crypto-blake2b \
-  kmod-crypto-cbc \
-  kmod-crypto-chacha20poly1305 \
-  kmod-crypto-cts \
-  kmod-crypto-deflate \
-  kmod-crypto-ecdh \
-  kmod-crypto-echainiv \
-  kmod-crypto-essiv \
-  kmod-crypto-kpp \
-  kmod-crypto-pcbc \
-  kmod-crypto-xcbc \
-  kmod-crypto-misc \
-  kmod-crypto-xxhash \
-  kmod-crypto-engine \
-  kmod-crypto-fcrypt \
-  kmod-crypto-md4 \
-  UDPspeeder \
-  openssh-sftp-server \
-  luci-proto-ipv6 \
-  luci-app-wol \
-  luci-app-filetransfer \
-  luci-app-openclash \
-  default-settings-chn
+  	autocore \
+  	kmod-tun \
+  	kmod-tcp-bbr \
+  	kmod-tls \
+  	kmod-sched-cake \
+  	kmod-nft-queue \
+  	kmod-nft-socket \
+ 	kmod-nft-tproxy \
+  	kmod-crypto-blake2b \
+  	kmod-crypto-cbc \
+  	kmod-crypto-chacha20poly1305 \
+  	kmod-crypto-cts \
+  	kmod-crypto-deflate \
+  	kmod-crypto-ecdh \
+  	kmod-crypto-echainiv \
+  	kmod-crypto-essiv \
+  	kmod-crypto-kpp \
+  	kmod-crypto-pcbc \
+  	kmod-crypto-xcbc \
+  	kmod-crypto-misc \
+  	kmod-crypto-xxhash \
+  	kmod-crypto-engine \
+  	kmod-crypto-fcrypt \
+  	kmod-crypto-md4 \
+  	UDPspeeder \
+  	openssh-sftp-server \
+  	luci-proto-ipv6 \
+  	luci-app-wol \
+  	luci-app-filetransfer \
+  	luci-app-openclash \
+  	default-settings-chn
 
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
 	block-mount \
+	kmod-nf-nathelper \
+	kmod-nf-nathelper-extra \
 	luci-light \
 	luci-app-package-manager \
 	luci-compat \
