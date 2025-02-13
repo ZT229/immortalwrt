@@ -6,6 +6,7 @@
 
 menuconfig TARGET_OPTIONS
 	bool "Target Options"  if DEVEL
+	default y
 
 	config TARGET_OPTIMIZATION
 		string "Target Optimizations" if TARGET_OPTIONS
@@ -41,7 +42,7 @@ menuconfig TARGET_OPTIONS
 	choice BPF_TOOLCHAIN
 		prompt "BPF toolchain" if DEVEL
 		default BPF_TOOLCHAIN_PREBUILT if HAS_PREBUILT_LLVM_TOOLCHAIN
-		default BPF_TOOLCHAIN_BUILD_LLVM
+		default BPF_TOOLCHAIN_HOST
 
 		config BPF_TOOLCHAIN_NONE
 			bool "None"
@@ -54,6 +55,7 @@ menuconfig TARGET_OPTIONS
 		config BPF_TOOLCHAIN_HOST
 			select USE_LLVM_HOST
 			bool "Use host LLVM toolchain"
+			default y
 
 		config BPF_TOOLCHAIN_BUILD_LLVM
 			select USE_LLVM_BUILD if NEED_BPF_TOOLCHAIN
