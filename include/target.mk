@@ -59,8 +59,6 @@ DEFAULT_PACKAGES.router:=\
 	firewall4 \
 	nftables \
 	kmod-nft-offload \
-  kmod-nf-nathelper \
-	kmod-nf-nathelper-extra \
   kmod-nf-nat6 \
 	odhcp6c \
 	odhcpd-ipv6only \
