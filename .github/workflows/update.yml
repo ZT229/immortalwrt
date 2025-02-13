@@ -42,6 +42,6 @@ jobs:
 
       - name: Push Changes
         run: |
-          git push origin filogic  # 推送到你的新分支
+          git push origin nx30pro  # 推送到你的新分支
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token 进行身份验证
