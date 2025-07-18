@@ -6,12 +6,14 @@ if ! uci -q get system.@imm_init[0].system_chn > "/dev/null"; then
 	uci -q batch <<-EOF
 		set system.@system[0].timezone="CST-8"
 		set system.@system[0].zonename="Asia/Shanghai"
+		set system.@system[0].zram_comp_algo="zstd"
+		set system.@system[0].zram_size_mb="512"
 
 		delete system.ntp.server
-		add_list system.ntp.server="ntp.tencent.com"
-		add_list system.ntp.server="ntp1.aliyun.com"
 		add_list system.ntp.server="ntp.ntsc.ac.cn"
 		add_list system.ntp.server="cn.ntp.org.cn"
+		add_list system.ntp.server="ntp.bupt.edu.cn"
+		add_list system.ntp.server="cn.pool.ntp.org"
 
 		set system.@imm_init[0].system_chn="1"
 		commit system
@@ -20,13 +22,16 @@ fi
 
 opkg_mirror="$(uci -q get system.@imm_init[0].opkg_mirror)"
 if [ -z "$opkg_mirror" ]; then
-	opkg_mirror="https://mirrors.vsean.net/openwrt"
+	opkg_mirror="https://mirrors.tuna.tsinghua.edu.cn/openwrt"
 	uci -q batch <<-EOF
 		set system.@imm_init[0].opkg_mirror="$opkg_mirror"
 		commit system
 	EOF
 fi
 
-sed -i.bak "s,https://downloads.immortalwrt.org,$opkg_mirror,g" "/etc/opkg/distfeeds.conf"
+rm -rf /tmp/luci-modulecache/
+rm -f /tmp/luci-indexcache
+
+sed -i.bak "s,https://mirrors.tuna.tsinghua.edu.cn/openwrt,$opkg_mirror,g" "/etc/opkg/distfeeds.conf"
 
 exit 0
