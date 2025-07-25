@@ -19,22 +19,4 @@ echo "log-facility=/dev/null" >> "/etc/dnsmasq.conf"
 
 ln -sf "/sbin/ip" "/usr/bin/ip"
 
-case "$DISTRIB_TARGET" in
-"bcm4908"/*|\
-"bcm53xx"/*|\
-"ramips/mt7621"|\
-"x86"/*)
-	if ! uci -q get system.@imm_init[0].packet_steering > "/dev/null"; then
-	uci -q batch <<-EOF
-		set network.globals="globals"
-		set network.@globals[0].packet_steering="1"
-		commit network
-
-		set system.@imm_init[0].packet_steering="1"
-		commit system
-	EOF
-	fi
-	;;
-esac
-
 exit 0
