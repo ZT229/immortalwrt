@@ -75,7 +75,6 @@ platform_do_upgrade() {
 	cmcc,a10-ubootmod|\
 	cmcc,rax3000m|\
 	cmcc,rax3000me|\
-	cudy,tr3000-v1-ubootmod|\
 	gatonetworks,gdsp|\
 	h3c,magic-nx30-pro|\
 	imou,lc-hx3001|\
@@ -136,6 +135,10 @@ platform_do_upgrade() {
 		nand_do_upgrade "$1"
 		;;
 	cudy,wr3000h-v1)
+		CI_UBIPART="ubi"
+		nand_do_upgrade "$1"
+		;;
+	cudy,tr3000)
 		CI_UBIPART="ubi"
 		nand_do_upgrade "$1"
 		;;
